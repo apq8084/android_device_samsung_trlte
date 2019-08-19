@@ -49,7 +49,7 @@
 using android::base::GetProperty;
 using android::base::ReadFileToString;
 using android::base::Trim;
-using android::init::property_set;
+using android::base::SetProperty;
 
 // copied from build/tools/releasetools/ota_from_target_files.py
 // but with "." at the end and empty entry
@@ -75,8 +75,8 @@ void property_override(char const prop[], char const value[], bool add = true)
 
 void gsm_properties()
 {
-    property_set("telephony.lteOnGsmDevice", "1");
-    property_set("ro.telephony.default_network", "9");
+    SetProperty("telephony.lteOnGsmDevice", "1");
+    SetProperty("ro.telephony.default_network", "9");
 }
 
 void cdma_properties(char const *operator_alpha,
@@ -84,14 +84,14 @@ void cdma_properties(char const *operator_alpha,
                      char const *cdma_sub)
 {
     /* Dynamic CDMA Properties */
-    property_set("ro.cdma.home.operator.alpha", operator_alpha);
-    property_set("ro.cdma.home.operator.numeric", operator_numeric);
-    property_set("ro.telephony.default_cdma_sub", cdma_sub);
+    SetProperty("ro.cdma.home.operator.alpha", operator_alpha);
+    SetProperty("ro.cdma.home.operator.numeric", operator_numeric);
+    SetProperty("ro.telephony.default_cdma_sub", cdma_sub);
 
     /* Static CDMA Properties */
-    property_set("ril.subscription.types", "NV,RUIM");
-    property_set("ro.telephony.default_network", "10");
-    property_set("telephony.lteOnCdmaDevice", "1");
+    SetProperty("ril.subscription.types", "NV,RUIM");
+    SetProperty("ro.telephony.default_network", "10");
+    SetProperty("telephony.lteOnCdmaDevice", "1");
 }
 
 void vendor_load_properties()
@@ -162,7 +162,7 @@ void vendor_load_properties()
             set_ro_product_prop(source, "device", "trltevzw");
             set_ro_product_prop(source, "name", "trltevzw");
         }
-        property_set("ro.telephony.get_imsi_from_sim", "true");
+        SetProperty("ro.telephony.get_imsi_from_sim", "true");
         property_override("ro.build.description", "trltevzw-user 6.0.1 MMB29M N910VVRU2CQL1 release-keys");
         cdma_properties("Verizon", "311480", "1");
     } else if (bootloader.find("N910W8") == 0) {
