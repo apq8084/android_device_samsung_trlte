@@ -162,6 +162,7 @@ void vendor_load_properties()
             set_ro_product_prop(source, "device", "trltevzw");
             set_ro_product_prop(source, "name", "trltevzw");
         }
+        property_set("ro.telephony.get_imsi_from_sim", "true");
         property_override("ro.build.description", "trltevzw-user 6.0.1 MMB29M N910VVRU2CQL1 release-keys");
         cdma_properties("Verizon", "311480", "1");
     } else if (bootloader.find("N910W8") == 0) {
