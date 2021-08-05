@@ -107,22 +107,22 @@ void vendor_load_properties()
     if (bootloader.find("N910F") == 0) {
         /* trltexx */
         for (const auto &source : ro_product_props_default_source_order) {
-            set_ro_product_prop(source, "fingerprint", "samsung/trltexx/trlte:6.0.1/MMB29M/N910FXXU1DRD1:user/release-keys");
+            set_ro_product_prop(source, "fingerprint", "samsung/trltexx/trlte:6.0.1/MMB29M/N910FXXS1DQH9:user/release-keys");
             set_ro_product_prop(source, "model", "SM-N910F");
             set_ro_product_prop(source, "device", "trlte");
             set_ro_product_prop(source, "name", "trltexx");
         }
-        property_override("ro.build.description", "trltexx-user 6.0.1 MMB29M N910FXXU1DRD1 release-keys");
+        property_override("ro.build.description", "trltexx-user 6.0.1 MMB29M N910FXXS1DQH9 release-keys");
         gsm_properties();
     } else if (bootloader.find("N910G") == 0) {
         /* trltedt */
         for (const auto &source : ro_product_props_default_source_order) {
-            set_ro_product_prop(source, "fingerprint", "samsung/trltedt/trlte:6.0.1/MMB29M/N910GDTU1DRD1:user/release-keys");
+            set_ro_product_prop(source, "fingerprint", "samsung/trltedt/trlte:6.0.1/MMB29M/N910GDTU1DQL2:user/release-keys");
             set_ro_product_prop(source, "model", "SM-N910G");
             set_ro_product_prop(source, "device", "trlte");
             set_ro_product_prop(source, "name", "trltedt");
         }
-        property_override("ro.build.description", "trltedt-user 6.0.1 MMB29M N910GDTU1DRD1 release-keys");
+        property_override("ro.build.description", "trltedt-user 6.0.1 MMB29M N910GDTU1DQL2 release-keys");
         gsm_properties();
     } else if (bootloader.find("N910P") == 0) {
         /* trltespr */
