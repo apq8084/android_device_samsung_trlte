@@ -21,6 +21,9 @@ TARGET_OTA_ASSERT_DEVICE := trlte,trltedt,trltecan,trltespr,trltetmo,trlteusc,tr
 # Camera
 TARGET_FIXUP_PREVIEW := true
 
+# Fingerprint
+BUILD_FINGERPRINT := samsung/trltexx/trlte:6.0.1/MMB29M/N910FXXS1DQH9:user/release-keys
+
 # Kernel
 TARGET_KERNEL_VARIANT_CONFIG := apq8084_sec_trlte_eur_defconfig
 
