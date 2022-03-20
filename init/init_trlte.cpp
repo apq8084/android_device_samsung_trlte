@@ -157,13 +157,13 @@ void vendor_load_properties()
     } else if (bootloader.find("N910V") == 0) {
         /* trltevzw */
         for (const auto &source : ro_product_props_default_source_order) {
-            set_ro_product_prop(source, "fingerprint", "Verizon/trltevzw/trltevzw:6.0.1/MMB29M/N910VVRU2CQL1:user/release-keys");
+            set_ro_product_prop(source, "fingerprint", "Verizon/trltevzw/trltevzw:6.0.1/MMB29M/N910VVRU2CTI1:user/release-keys");
             set_ro_product_prop(source, "model", "SM-N910V");
             set_ro_product_prop(source, "device", "trltevzw");
             set_ro_product_prop(source, "name", "trltevzw");
         }
         SetProperty("ro.telephony.get_imsi_from_sim", "true");
-        property_override("ro.build.description", "trltevzw-user 6.0.1 MMB29M N910VVRU2CQL1 release-keys");
+        property_override("ro.build.description", "trltevzw-user 6.0.1 MMB29M N910VVRU2CTI1 release-keys");
         cdma_properties("Verizon", "311480", "1");
     } else if (bootloader.find("N910W8") == 0) {
         /* trltecan */
